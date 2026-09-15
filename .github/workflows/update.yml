@@ -1,0 +1,33 @@
+name: Обновить расписание
+
+on:
+  schedule:
+    # 16:00 по Москве (UTC+3)
+    - cron: "0 13 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: npm
+      - run: npm ci
+      - run: node scripts/update-schedule.mjs
+      - name: Сохранить, если файл изменился
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add schedule.json
+          if git diff --staged --quiet; then
+            echo "Расписание не изменилось"
+          else
+            git commit -m "Обновление расписания с Яндекс Диска"
+            git push
+          fi
