@@ -1,0 +1,11 @@
+{
+  "name": "td-26-11-1-schedule",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "update": "node scripts/update-schedule.mjs"
+  },
+  "dependencies": {
+    "xlsx": "^0.18.5"
+  }
+}
