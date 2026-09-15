@@ -216,7 +216,7 @@ function render() {
         </div>
         <p class="updated">Обновлено ${escapeHtml(formatUpdatedAt(schedule.fetchedAt))}${
           schedule.sourceModifiedAt ? ` · файл ${escapeHtml(formatUpdatedAt(schedule.sourceModifiedAt))}` : ""
-        }<span class="dot">·</span>автообновление пн–сб, 6:00–18:00</p>
+        }<span class="dot">·</span>автообновление 18:00</p>
         ${payload.warning || payload.stale ? `<p class="warn">${escapeHtml(payload.warning ?? "Показана сохранённая копия расписания")}</p>` : ""}
       </header>
       ${renderBanner(status)}
