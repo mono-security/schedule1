@@ -199,10 +199,10 @@
             "time": "08:10–09:40",
             "startMin": 490,
             "endMin": 580,
-            "subject": "СГ.05 Основы финансовой грамотности",
-            "teacher": "Калашникова А.В.",
+            "subject": "СГ.05 Основы финансовой грамотности(ЗАМЕНА)",
+            "teacher": "Лексикова и.С.",
             "room": "306/3",
-            "isReplacement": false,
+            "isReplacement": true,
             "id": "2026-10-22-1-490-0",
             "dayKey": "2026-10-22",
             "weekday": "четверг",
@@ -357,8 +357,8 @@
       }
     ],
     "sourceName": "ЭУиК.xls",
-    "sourceModifiedAt": "2026-10-22T10:14:44+00:00",
-    "fetchedAt": "2026-10-22T17:43:25.640Z"
+    "sourceModifiedAt": "2026-10-23T12:04:13+00:00",
+    "fetchedAt": "2026-10-23T17:33:56.859Z"
   },
   "stale": false,
   "warning": null
